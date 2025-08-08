@@ -1,0 +1,36 @@
+﻿@model List<TheImage>
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addImageModal">AddImage</button>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+	@foreach (TheImage image in Model)
+	{
+		<div class="col">
+			<div class="h-100">
+				<img src=@("data:image/jpg;base64,"+Convert.ToBase64String(image.Image)) class="card-img-top h-100"/>
+			</div>
+		</div>
+
+	}
+</div>
+<div class="modal fade" id="addImageModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header justify-content-center">
+				Add image
+			</div>
+			<div class="modal-body">
+				<form asp-controller="Home" asp-action="AddImage" enctype="multipart/form-data">
+					<div class="vstack gap-3">
+						<label for="form-label" name="imageName">Image Name</label>
+						<input type="text" class="form-floating" name="imageName" id="imageName" placeholder="Image Name" />
+						<label for="form-label" name="imagePassword">Image Password</label>
+						<input type="text" class="form-floating" name="imagePassword" id="password" placeholder="Protect Image" />
+						<input type="file" id="image" name="image" accept="image/*" placeholder="Upload Photo" />
+						<img src="Images/default.jpg" id="currentImage" width="50" height="50" />
+					</div>
+					<button type="submit">Add Image</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

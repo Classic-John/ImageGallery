@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\bin\Debug\net8.0\Datalayer.deps.json
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\bin\Debug\net8.0\Datalayer.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\bin\Debug\net8.0\Datalayer.pdb
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\bin\Debug\net8.0\Core.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\bin\Debug\net8.0\Core.pdb
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.csproj.Up2Date
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\refint\Datalayer.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.pdb
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\ref\Datalayer.dll

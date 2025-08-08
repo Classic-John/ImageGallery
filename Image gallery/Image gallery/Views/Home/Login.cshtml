@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+@{
+	ViewData["Title"] = "Login";
+}
+
+<body>
+	<div class="container mt-5">
+		<div class="justify-content-center">
+			<div class="col-md-6">
+				<div class="card">
+					<h5 class="card-header text-center">Login</h5>
+					<div class="card-body">
+						<form asp-controller="Home" asp-action ="UserGallery" method="post">
+							<div class="mb-3">
+								<label for="Username" class=form-label></label>
+								<input type="text" id="Username" name="Username" class="form-control" />
+							</div>
+							<div class="mb-3">
+								<input type="text" name="Password" id="Name" class="form-control" />
+								<label for="Password" class="form-label"></label>
+							</div>
+							<div class="d-grid">
+								<button type="submit" class="btn btn-primary">Login</button>
+							</div>
+						</form>
+					</div>
+					<div class="card-footer text-center">
+						<button type="button" class="btn btn-secondary">Create Account</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
