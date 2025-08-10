@@ -13,3 +13,4 @@ C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Imag
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\refint\Datalayer.dll
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.pdb
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\ref\Datalayer.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Datalayer\obj\Debug\net8.0\Datalayer.sourcelink.json

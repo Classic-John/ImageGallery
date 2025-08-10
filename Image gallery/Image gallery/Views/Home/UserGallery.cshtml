@@ -4,12 +4,26 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
 	@foreach (TheImage image in Model)
 	{
-		<div class="col">
-			<div class="h-100">
-				<img src=@("data:image/jpg;base64,"+Convert.ToBase64String(image.Image)) class="card-img-top h-100"/>
+		<form id="imagesForm" asp-controller="Home" asp-action="DuplicateImage" method="post">
+			<div class="col">
+				<div class="card h-100">
+					<img src=@("data:image/jpg;base64,"+Convert.ToBase64String(image.Image)) class="card-img-top h-100" />
+					<div class="card-body">
+						<input type="text" class="form-control" value="@image.Id" name="imageId" hidden />
+						<h5 class="card-title">@image.Name</h5>
+					</div>
+					<div class="card-footer">
+						<blockquote class="blockquote">
+							<div class="card-text">Created at: @image.CreationDate.ToString("dd/MM/yyyy HH:mm")</div>
+						</blockquote>
+						<button class="btn btn-primary" type="submit">Duplicate</button>
+						<button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#updateImage">Update</button>
+						<button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteImage">Delete</button>
+						<button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#changeSubject">Subject</button>
+					</div>
+				</div>
 			</div>
-		</div>
-
+		</form>
 	}
 </div>
 <div class="modal fade" id="addImageModal">
@@ -19,18 +33,75 @@
 				Add image
 			</div>
 			<div class="modal-body">
-				<form asp-controller="Home" asp-action="AddImage" enctype="multipart/form-data">
+				<form asp-controller="Home" asp-action="AddImage" enctype="multipart/form-data" method="post">
 					<div class="vstack gap-3">
-						<label for="form-label" name="imageName">Image Name</label>
+						<label for="imageName" class="form-label" name="imageName">Image Name</label>
 						<input type="text" class="form-floating" name="imageName" id="imageName" placeholder="Image Name" />
-						<label for="form-label" name="imagePassword">Image Password</label>
+						<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
 						<input type="text" class="form-floating" name="imagePassword" id="password" placeholder="Protect Image" />
 						<input type="file" id="image" name="image" accept="image/*" placeholder="Upload Photo" />
 						<img src="Images/default.jpg" id="currentImage" width="50" height="50" />
 					</div>
-					<button type="submit">Add Image</button>
+					<button class="btn btn-primary" type="submit">Add Image</button>
 				</form>
 			</div>
 		</div>
 	</div>
 </div>
+
+<div class="modal fade" id="updateImage">
+	<div class="modal-dialog">
+		<div class="modal-header justify-content-center">
+			Update Image
+		</div>
+	</div>
+	<div class="modal-body">
+		<form asp-controller="Home" asp-action="UpdateImage" method="post" enctype="multipart/form-data">
+			<input type="text" class="form-control" name="imageId" id="imageId" hidden />
+			<div class="vstack gap-3">
+				<label for="imageName" class="form-label" name="imageName">Image Name</label>
+				<input type="text" class="form-floating" name="imageName" id="imageName" placeholder="Image Name" />
+				<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
+				<input type="text" class="form-floating" name="imagePassword" id="password" placeholder="Protect Image" />
+				<input type="file" id="image" name="image" accept="image/*" placeholder="Upload Photo" />
+				<img src="Images/default.jpg" id="currentImage" width="50" height="50" />
+			</div>
+			<button class="btn btn-primary" type="submit">Update Image</button>
+		</form>
+	</div>
+</div>
+
+<div class="modal fade" id="deleteImage">
+	<div class="modal-dialog">
+		<div class="modal-header justify-content-center">
+			Delete Image
+		</div>
+	</div>
+	<div class="modal-body">
+		<form asp-controller="Home" asp-action="DeleteImage" method="post" enctype="multipart/form-data">
+			<input type="text" class="form-control" name="imageId" id="imageId" hidden />
+			<div class="vstack gap-3">
+				<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
+				<input type="text" class="form-floating" name="imagePassword" id="imagePassword" placeholder="Password..." />
+			</div>
+			<button class="btn btn-primary" type="submit">Delete Image</button>
+		</form>
+	</div>
+</div>
+
+<div class="modal fade" id="changeSubject">
+	<div class="modal-dialog">
+		<div class="modal-header justify-content-center">
+			Change Subject
+		</div>
+	</div>
+	<div class="modal-body">
+		<form asp-controller="Home" asp-action="ChangeSubject" method="post">
+			<input type="text" class="form-control" name="imageId" id="imageId" hidden />
+			<label class="form-label" name="imageSubject">
+			<input type="text" />
+			</label>
+		</form>
+	</div>
+</div>
+

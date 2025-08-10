@@ -89,3 +89,4 @@ C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Imag
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\Datalayer.dll
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\Datalayer.pdb
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\obj\Debug\net8.0\Image gallery.sourcelink.json
