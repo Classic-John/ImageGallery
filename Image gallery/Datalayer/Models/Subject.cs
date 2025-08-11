@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Datalayer.Models.BaseClass;
 
 namespace Datalayer.Models
 {
-    public class Subject
+    public class Subject : BaseEntity
     {
-        string? Name { get; set; }
+        public string? Name { get; set; }
         public Subject(string? name)
             => Name = name;
     }

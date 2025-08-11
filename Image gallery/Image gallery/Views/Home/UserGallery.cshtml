@@ -1,8 +1,9 @@
-﻿@model List<TheImage>
-<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addImageModal">AddImage</button>
+﻿@model (List<TheImage> ,List<Subject> )
+<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addImageModal">Add Image</button>
+<button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#addSubjectModal">Add Subject</button>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
-	@foreach (TheImage image in Model)
+	@foreach (TheImage image in Model.Item1)
 	{
 		<form id="imagesForm" asp-controller="Home" asp-action="DuplicateImage" method="post">
 			<div class="col">
@@ -11,15 +12,16 @@
 					<div class="card-body">
 						<input type="text" class="form-control" value="@image.Id" name="imageId" hidden />
 						<h5 class="card-title">@image.Name</h5>
-					</div>
-					<div class="card-footer">
+						<p class="card-text @(image.Subject is null ? "hidden" :"")>@image.Subject.Name</p>
+				</div>
+				<div class="card-footer">
 						<blockquote class="blockquote">
 							<div class="card-text">Created at: @image.CreationDate.ToString("dd/MM/yyyy HH:mm")</div>
 						</blockquote>
 						<button class="btn btn-primary" type="submit">Duplicate</button>
-						<button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#updateImage">Update</button>
-						<button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteImage">Delete</button>
-						<button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#changeSubject">Subject</button>
+						<button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#updateImage" onclick="changeWithId('@image.Id','imageIdUpdateImage')">Update</button>
+						<button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteImage" onclick="changeWithId('@image.Id','imageIdDeleteImage')">Delete</button>
+						<button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#changeSubject" onclick="changeWithId('@image.Id','imageIdFromChangeSubject')">Change Subject</button>
 					</div>
 				</div>
 			</div>
@@ -35,10 +37,22 @@
 			<div class="modal-body">
 				<form asp-controller="Home" asp-action="AddImage" enctype="multipart/form-data" method="post">
 					<div class="vstack gap-3">
-						<label for="imageName" class="form-label" name="imageName">Image Name</label>
 						<input type="text" class="form-floating" name="imageName" id="imageName" placeholder="Image Name" />
-						<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
+						<label for="imageName" class="form-label" name="imageName">Image Name</label>
 						<input type="text" class="form-floating" name="imagePassword" id="password" placeholder="Protect Image" />
+						<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="subjects">Subjects</span>
+							<select type="text" class="form-select" name="chosenSubject" id="chosenSubject">
+								@{
+									foreach (Subject subject in @Model.Item2)
+									{
+										<option value="@subject.Name">@subject.Name</option>
+									}
+								}
+							</select>
+						</div>
+
 						<input type="file" id="image" name="image" accept="image/*" placeholder="Upload Photo" />
 						<img src="Images/default.jpg" id="currentImage" width="50" height="50" />
 					</div>
@@ -57,12 +71,12 @@
 	</div>
 	<div class="modal-body">
 		<form asp-controller="Home" asp-action="UpdateImage" method="post" enctype="multipart/form-data">
-			<input type="text" class="form-control" name="imageId" id="imageId" hidden />
+			<input type="text" class="form-control" name="imageId" id="imageIdUpdateImage" hidden />
 			<div class="vstack gap-3">
-				<label for="imageName" class="form-label" name="imageName">Image Name</label>
 				<input type="text" class="form-floating" name="imageName" id="imageName" placeholder="Image Name" />
-				<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
+				<label for="imageName" class="form-label" name="imageName">Image Name</label>
 				<input type="text" class="form-floating" name="imagePassword" id="password" placeholder="Protect Image" />
+				<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
 				<input type="file" id="image" name="image" accept="image/*" placeholder="Upload Photo" />
 				<img src="Images/default.jpg" id="currentImage" width="50" height="50" />
 			</div>
@@ -79,10 +93,10 @@
 	</div>
 	<div class="modal-body">
 		<form asp-controller="Home" asp-action="DeleteImage" method="post" enctype="multipart/form-data">
-			<input type="text" class="form-control" name="imageId" id="imageId" hidden />
+			<input type="text" class="form-control" name="imageIdDeleteImage" id="imageIdDeleteImage" hidden />
 			<div class="vstack gap-3">
-				<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
 				<input type="text" class="form-floating" name="imagePassword" id="imagePassword" placeholder="Password..." />
+				<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
 			</div>
 			<button class="btn btn-primary" type="submit">Delete Image</button>
 		</form>
@@ -97,11 +111,34 @@
 	</div>
 	<div class="modal-body">
 		<form asp-controller="Home" asp-action="ChangeSubject" method="post">
-			<input type="text" class="form-control" name="imageId" id="imageId" hidden />
-			<label class="form-label" name="imageSubject">
-			<input type="text" />
-			</label>
+			<input type="text" class="form-control" name="imageId" id="imageIdFromChangeSubject" hidden />
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="subjects">Subjects</span>
+				<select type="text" class="form-select" name="chosenSubject" id="chosenSubject">
+					@{
+						foreach (Subject subject in @Model.Item2)
+						{
+							<option value="@subject.Name">@subject.Name</option>
+						}
+					}
+				</select>
+			</div>
+			<button class="btn btn-primary" type="submit">Change Subject</button>
 		</form>
 	</div>
 </div>
 
+<div class="modal fade" id="addSubjectModal">
+	<div class="modal-dialog">
+		<div class="modal-header justify-content-center">
+			Add Subject
+		</div>
+	</div>
+	<div class="modal-body">
+		<form asp-controller="Home" asp-action="AddSubject" method="post">
+			<input type="text" class="form-control" name="subjectName" placeholder="Insert Subject" />
+			<label for="subjectName" class="form-label">Subject Name</label>
+			<button class="btn btn-primary" type="submit">Create Subject</button>
+		</form>
+	</div>
+</div>

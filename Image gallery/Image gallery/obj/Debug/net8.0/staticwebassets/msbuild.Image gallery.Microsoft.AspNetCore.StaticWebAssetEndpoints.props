@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Image gallery/JavaScript.80v9cbenp1.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JavaScript.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"80v9cbenp1"},{"Name":"integrity","Value":"sha256-OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU="},{"Name":"label","Value":"_content/Image gallery/JavaScript.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"136"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 11 Aug 2025 21:16:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Image gallery/JavaScript.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\JavaScript.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"136"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 11 Aug 2025 21:16:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

@@ -1,12 +1,125 @@
 {
   "Version": 1,
-  "Hash": "HFbfZUCVpxNcWJHjBVTozYdN0SjOyYRXv8Y04TygDDE=",
+  "Hash": "DtbCzGHRD6C1v0bo5ZidHzrvEy3KBoWdd5IWNrA6HHs=",
   "Source": "Image gallery",
   "BasePath": "_content/Image gallery",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Image gallery\\wwwroot",
+      "Source": "Image gallery",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\",
+      "BasePath": "_content/Image gallery",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
+      "SourceId": "Image gallery",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\",
+      "BasePath": "_content/Image gallery",
+      "RelativePath": "JavaScript#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "80v9cbenp1",
+      "Integrity": "OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JavaScript.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "JavaScript.80v9cbenp1.js",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 11 Aug 2025 21:16:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "80v9cbenp1"
+        },
+        {
+          "Name": "label",
+          "Value": "JavaScript.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU="
+        }
+      ]
+    },
+    {
+      "Route": "JavaScript.js",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 11 Aug 2025 21:16:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU="
+        }
+      ]
+    }
+  ]
 }

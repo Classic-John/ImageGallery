@@ -1,5 +1,88 @@
 {
   "Version": 1,
   "ManifestType": "Build",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "JavaScript.80v9cbenp1.js",
+      "AssetFile": "JavaScript.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 11 Aug 2025 21:16:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "80v9cbenp1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU="
+        },
+        {
+          "Name": "label",
+          "Value": "JavaScript.js"
+        }
+      ]
+    },
+    {
+      "Route": "JavaScript.js",
+      "AssetFile": "JavaScript.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 11 Aug 2025 21:16:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OD1Xtesj3x18E2euMSFoEY1tvkMjeD2PQYozNlKGwkU="
+        }
+      ]
+    }
+  ]
 }

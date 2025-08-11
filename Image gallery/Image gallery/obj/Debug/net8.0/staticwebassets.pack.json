@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
+      "PackagePath": "staticwebassets\\JavaScript.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Image gallery.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Image gallery.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Image gallery.props",
+      "PackagePath": "build\\Image gallery.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Image gallery.props",
+      "PackagePath": "buildMultiTargeting\\Image gallery.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Image gallery.props",
+      "PackagePath": "buildTransitive\\Image gallery.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
