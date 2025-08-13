@@ -1,6 +1,7 @@
-﻿@model (List<TheImage> ,List<Subject> )
+﻿@model (List<TheImage> ,List<Subject>,List<string>)
 <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addImageModal">Add Image</button>
 <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#addSubjectModal">Add Subject</button>
+<button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#FilterBySubjectModal">Filter by Subject</button>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
 	@foreach (TheImage image in Model.Item1)
@@ -22,6 +23,7 @@
 						<button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#updateImage" onclick="changeWithId('@image.Id','imageIdUpdateImage')">Update</button>
 						<button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteImage" onclick="changeWithId('@image.Id','imageIdDeleteImage')">Delete</button>
 						<button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#changeSubject" onclick="changeWithId('@image.Id','imageIdFromChangeSubject')">Change Subject</button>
+						<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#FilterModal" onclick="changeWithId('@image.Id','imageIdFromFilter')">Image Filter</button>
 					</div>
 				</div>
 			</div>
@@ -140,5 +142,59 @@
 			<label for="subjectName" class="form-label">Subject Name</label>
 			<button class="btn btn-primary" type="submit">Create Subject</button>
 		</form>
+	</div>
+</div>
+
+<div class="modal fade" id="FilterModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header justify-content-center">
+				Choose a filter for your image
+			</div>
+			<div class="modal-body">
+				<form asp-controller="Home" asp-action="ApplyImageFilter" method="post">
+					<input type="text" class="form-control" name="imageIdFromFilter" id="imageIdFromFilter" hidden />
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="filters">Filters</span>
+						<select class="form-select" name="chosenFilter" id="chosenFilter">
+							@{
+								int count = 1;
+								foreach (string filterOption in @Model.Item3)
+								{
+									<option value=@(count++)>@filterOption</option>
+								}
+							}
+						</select>
+					</div>
+					<button class="btn btn-primary" type="submit">Apply filter</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="FilterBySubjectModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header justify-content-center">
+				Choose filter option
+			</div>
+			<div class="modal-body">
+				<form asp-controller="Home" asp-action="FilterBySubject" method="post">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="filterSelected">Filters</span>
+						<select class="form-select" name="SelectedFilter" id="selectedFilter">
+							@{
+								foreach (Subject subject in @Model.Item2)
+								{
+									<option value=@subject.Id>@subject.Name</option>
+								}
+							}
+						</select>
+					</div>
+					<button class="btn btn-primary" type="submit">Apply filter</button>
+				</form>
+			</div>
+		</div>
 	</div>
 </div>

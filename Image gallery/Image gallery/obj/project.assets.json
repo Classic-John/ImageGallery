@@ -565,6 +565,22 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.11": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "System.ClientModel/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -1007,6 +1023,10 @@
       "Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Datalayer": "1.0.0",
+          "SixLabors.ImageSharp": "3.1.11"
+        },
         "compile": {
           "bin/placeholder/Core.dll": {}
         },
@@ -1018,7 +1038,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
         },
@@ -1883,6 +1902,22 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "SixLabors.ImageSharp/3.1.11": {
+      "sha512": "JfPLyigLthuE50yi6tMt7Amrenr/fA31t2CvJyhy/kQmfulIBAqo5T/YFUSRHtuYPXRSaUHygFeh6Qd933EoSw==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.1.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.1.11.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
       ]
     },
     "System.ClientModel/1.0.0": {

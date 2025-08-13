@@ -395,6 +395,14 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.11": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.11.0"
+          }
+        }
+      },
       "System.ClientModel/1.0.0": {
         "dependencies": {
           "System.Memory.Data": "1.0.2",
@@ -616,6 +624,10 @@
         }
       },
       "Core/1.0.0": {
+        "dependencies": {
+          "Datalayer": "1.0.0",
+          "SixLabors.ImageSharp": "3.1.11"
+        },
         "runtime": {
           "Core.dll": {
             "assemblyVersion": "1.0.0",
@@ -625,7 +637,6 @@
       },
       "Datalayer/1.0.0": {
         "dependencies": {
-          "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
         },
@@ -867,6 +878,13 @@
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JfPLyigLthuE50yi6tMt7Amrenr/fA31t2CvJyhy/kQmfulIBAqo5T/YFUSRHtuYPXRSaUHygFeh6Qd933EoSw==",
+      "path": "sixlabors.imagesharp/3.1.11",
+      "hashPath": "sixlabors.imagesharp.3.1.11.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",

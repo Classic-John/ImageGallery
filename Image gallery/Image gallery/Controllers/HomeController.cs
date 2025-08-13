@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using Core.Services;
+using Datalayer.Enums;
+using Datalayer.Interfaces;
 using Datalayer.Models;
 using Datalayer.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +14,15 @@ namespace Image_gallery.Controllers
         public static User? CurrentUser { get; set; }
         public static bool IsLoggedIn { get; set; } = false;
         public static List<Subject> Subjects { get; set; } = new();
-        public HomeController() { }
+        private readonly IImageFilterService _imageFilterService;
+        private readonly ITheImageService _theImageService;
+        private readonly IUserService _userService;
+        public HomeController(IImageFilterService imageFilterService, ITheImageService theImageService, IUserService userService)
+        {
+            _imageFilterService = imageFilterService;
+            _theImageService = theImageService;
+            _userService = userService;
+        }
         [Route("/")]
         public IActionResult Login()
         {
@@ -24,7 +35,7 @@ namespace Image_gallery.Controllers
                 return View("UserGallery", (CurrentUser.Images, Subjects));
             CurrentUser = new(Request.Form["Username"], Request.Form["Password"], new List<TheImage>());
             IsLoggedIn = true;
-            return View("UserGallery", (CurrentUser.Images, Subjects));
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         public IActionResult LogOff()
         {
@@ -51,10 +62,12 @@ namespace Image_gallery.Controllers
             byte[]? image = ConvertImageToBytes(Request.Form.Files["image"]).Result;
             string? password = Request.Form["ImagePassword"];
             string? subject = Request.Form["chosenSubject"];
-            TheImage? newImage = new(name, password, image, CurrentUser, creationTime,new Subject(subject));
+            TheImage? newImage = new(name, password, image, CurrentUser, creationTime, new Subject(subject));
             CurrentUser.Images.Add(newImage);
-            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
-            return View("UserGallery", (CurrentUser.Images, Subjects));
+
+            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count-1;
+
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("UpdateImage")]
         public IActionResult UpdateImage()
@@ -65,7 +78,10 @@ namespace Image_gallery.Controllers
             byte[]? image = ConvertImageToBytes(Request.Form.Files["image"]).Result;
             string? password = Request.Form["ImagePassword"];
             CurrentUser.Images[id.Value] = new TheImage(name, password, image, CurrentUser, creationTime);
-            return View("UserGallery", (CurrentUser.Images, Subjects));
+
+            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
+
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("DeleteImage")]
         public IActionResult DeleteImage()
@@ -82,22 +98,43 @@ namespace Image_gallery.Controllers
             int? id = Convert.ToInt32(Request.Form["imageIdDeleteImage"]);
             if (CurrentUser.Images[id.Value].Password.Equals(password))
                 CurrentUser.Images.Remove(CurrentUser.Images[id.Value]);
-            return View("UserGallery", (CurrentUser.Images, Subjects));
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("DuplicateImage")]
         public IActionResult DuplicateImage()
         {
             int? id = Convert.ToInt32(Request.Form["imageId"]);
-            CurrentUser.Images.Add(new TheImage(CurrentUser.Images[id.Value].Name, CurrentUser.Images[id.Value].Password, 
+            CurrentUser.Images.Add(new TheImage(CurrentUser.Images[id.Value].Name, CurrentUser.Images[id.Value].Password,
                 CurrentUser.Images[id.Value].Image, CurrentUser, DateTime.Now, CurrentUser.Images[id.Value].Subject));
-            return View("UserGallery", (CurrentUser.Images,Subjects));
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("AddSubject")]
         public IActionResult AddSubject()
         {
             string? subject = Request.Form["subjectName"];
             Subjects.Add(new Subject(subject));
-            return View("UserGallery",(CurrentUser.Images,Subjects));
+            Subjects[Subjects.Count - 1].Id = Subjects.Count - 1;
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+        }
+        [HttpPost("ApplyImageFilter")]
+        public IActionResult ApplyImageFilter()
+        {
+            int? id = Convert.ToInt32(Request.Form["imageIdFromFilter"]);
+            int? chosenFilter = Convert.ToInt32(Request.Form["chosenFilter"]);
+            byte[] newImage = _imageFilterService.ApplyChosenFilter(CurrentUser.Images[id.Value].Image, chosenFilter.Value);
+                CurrentUser.Images.Add(new(CurrentUser.Images[id.Value].Name, CurrentUser.Images[id.Value].Password, newImage, CurrentUser, 
+                    DateTime.Now, CurrentUser.Images[id.Value].Subject));
+
+            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count-1;
+
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+        }
+        [HttpPost("FilterBySubject")]
+        public IActionResult FilterBySubject()
+        {
+            int? subjectId = Convert.ToInt32(Request.Form["SelectedFilter"]);
+            List<TheImage> filteredImages = CurrentUser.Images.Where(image => image.Subject.Name.Equals(Subjects[subjectId.Value].Name)).ToList();
+            return View("UserGallery",(filteredImages,Subjects,Enum.GetNames<FilterOption>().ToList()));
         }
     }
 }

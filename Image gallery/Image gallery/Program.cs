@@ -1,9 +1,9 @@
 using System.Threading.RateLimiting;
 using Core;
-using Core.Services;
 using Datalayer.Repositories;
 using Datalayer.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
@@ -46,6 +46,10 @@ builder.Services.AddRateLimiter(options =>
 
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<TheImageRepository>();
+
+builder.Services.AddScoped<IImageFilterService,ImageFiterService>();
+builder.Services.AddScoped<IUserService,UserService>();
+builder.Services.AddScoped<ITheImageService,TheImageService>();
 
 //builder.Services.AddScoped<UnitOfWork>();
 

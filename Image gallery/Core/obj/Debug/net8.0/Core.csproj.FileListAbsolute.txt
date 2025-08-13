@@ -10,3 +10,7 @@ C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Imag
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Core\obj\Debug\net8.0\Core.pdb
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Core\obj\Debug\net8.0\ref\Core.dll
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Core\obj\Debug\net8.0\Core.sourcelink.json
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Core\bin\Debug\net8.0\Datalayer.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Core\bin\Debug\net8.0\Datalayer.pdb
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Core\obj\Debug\net8.0\Core.csproj.Up2Date
