@@ -17,11 +17,13 @@ namespace Image_gallery.Controllers
         private readonly IImageFilterService _imageFilterService;
         private readonly ITheImageService _theImageService;
         private readonly IUserService _userService;
-        public HomeController(IImageFilterService imageFilterService, ITheImageService theImageService, IUserService userService)
+        private readonly IEncryptionAndDecryptionService _encryptionAndDecryptionService;
+        public HomeController(IImageFilterService imageFilterService, ITheImageService theImageService, IUserService userService, IEncryptionAndDecryptionService encryptionAndDecryptionService)
         {
             _imageFilterService = imageFilterService;
             _theImageService = theImageService;
             _userService = userService;
+            _encryptionAndDecryptionService = encryptionAndDecryptionService;
         }
         [Route("/")]
         public IActionResult Login()
@@ -60,12 +62,14 @@ namespace Image_gallery.Controllers
             string? name = Request.Form["imageName"];
             DateTime creationTime = DateTime.Now;
             byte[]? image = ConvertImageToBytes(Request.Form.Files["image"]).Result;
-            string? password = Request.Form["ImagePassword"];
+            string? password = _encryptionAndDecryptionService.HashPassword(Request.Form["ImagePassword"]);
             string? subject = Request.Form["chosenSubject"];
-            TheImage? newImage = new(name, password, image, CurrentUser, creationTime, new Subject(subject));
+            (byte[] imageKey, byte[] imageIV) = _encryptionAndDecryptionService.GenerateKeyAndInitializationVector();
+            byte[] encryptedImage = _encryptionAndDecryptionService.EncryptImage(image, imageKey, imageIV);
+            TheImage? newImage = new(name, password, encryptedImage, CurrentUser, creationTime, new Subject(subject), imageKey, imageIV);
             CurrentUser.Images.Add(newImage);
 
-            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count-1;
+            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
 
             return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
@@ -75,9 +79,11 @@ namespace Image_gallery.Controllers
             int? id = Convert.ToInt32(Request.Form["imageId"]);
             string? name = Request.Form["imageName"];
             DateTime creationTime = DateTime.Now;
-            byte[]? image = ConvertImageToBytes(Request.Form.Files["image"]).Result;
-            string? password = Request.Form["ImagePassword"];
-            CurrentUser.Images[id.Value] = new TheImage(name, password, image, CurrentUser, creationTime);
+            (byte[] imageKey, byte[] imageIV) = _encryptionAndDecryptionService.GenerateKeyAndInitializationVector();
+            byte[]? image = _encryptionAndDecryptionService.EncryptImage(ConvertImageToBytes(Request.Form.Files["image"]).Result, imageKey, imageIV);
+            string? password = _encryptionAndDecryptionService.HashPassword(Request.Form["ImagePassword"]);
+            string? subject = Request.Form["subjectFromUpdate"];
+            CurrentUser.Images[id.Value] = new TheImage(name, password, image, CurrentUser, creationTime, new Subject(subject), imageKey, imageIV);
 
             CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
 
@@ -105,7 +111,8 @@ namespace Image_gallery.Controllers
         {
             int? id = Convert.ToInt32(Request.Form["imageId"]);
             CurrentUser.Images.Add(new TheImage(CurrentUser.Images[id.Value].Name, CurrentUser.Images[id.Value].Password,
-                CurrentUser.Images[id.Value].Image, CurrentUser, DateTime.Now, CurrentUser.Images[id.Value].Subject));
+                CurrentUser.Images[id.Value].Image, CurrentUser, DateTime.Now, CurrentUser.Images[id.Value].Subject,
+                CurrentUser.Images[id.Value].imageKey, CurrentUser.Images[id.Value].imageIV));
             return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("AddSubject")]
@@ -122,10 +129,12 @@ namespace Image_gallery.Controllers
             int? id = Convert.ToInt32(Request.Form["imageIdFromFilter"]);
             int? chosenFilter = Convert.ToInt32(Request.Form["chosenFilter"]);
             byte[] newImage = _imageFilterService.ApplyChosenFilter(CurrentUser.Images[id.Value].Image, chosenFilter.Value);
-                CurrentUser.Images.Add(new(CurrentUser.Images[id.Value].Name, CurrentUser.Images[id.Value].Password, newImage, CurrentUser, 
-                    DateTime.Now, CurrentUser.Images[id.Value].Subject));
+            (byte[] imageKey, byte[] imageIV) = _encryptionAndDecryptionService.GenerateKeyAndInitializationVector();
+            byte[] encryptedImage = _encryptionAndDecryptionService.EncryptImage(newImage, imageKey, imageIV);
+            CurrentUser.Images.Add(new(CurrentUser.Images[id.Value].Name, CurrentUser.Images[id.Value].Password, encryptedImage, CurrentUser,
+                DateTime.Now, CurrentUser.Images[id.Value].Subject, imageKey, imageIV));
 
-            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count-1;
+            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
 
             return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
@@ -134,7 +143,20 @@ namespace Image_gallery.Controllers
         {
             int? subjectId = Convert.ToInt32(Request.Form["SelectedFilter"]);
             List<TheImage> filteredImages = CurrentUser.Images.Where(image => image.Subject.Name.Equals(Subjects[subjectId.Value].Name)).ToList();
-            return View("UserGallery",(filteredImages,Subjects,Enum.GetNames<FilterOption>().ToList()));
+            return View("UserGallery", (filteredImages, Subjects, Enum.GetNames<FilterOption>().ToList()));
+        }
+        [HttpPost("UnlockImage")]
+        public IActionResult UnlockImage()
+        {
+            int? id = Convert.ToInt32(Request.Form["imageIdFromUnlocking"]);
+            string? password = Request.Form["passwordFromUnlocking"];
+            if (!_encryptionAndDecryptionService.VerifyHashedPassword(password, CurrentUser.Images[id.Value].Password))
+                return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+
+            byte[] decryptedImage = _encryptionAndDecryptionService.DecryptImage(CurrentUser.Images[id.Value].Image, CurrentUser.Images[id.Value].imageKey, CurrentUser.Images[id.Value].imageIV);
+            CurrentUser.Images[id.Value].Image = decryptedImage;
+            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+
         }
     }
 }

@@ -50,6 +50,7 @@ builder.Services.AddScoped<TheImageRepository>();
 builder.Services.AddScoped<IImageFilterService,ImageFiterService>();
 builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddScoped<ITheImageService,TheImageService>();
+builder.Services.AddScoped<IEncryptionAndDecryptionService,EncryptionAndDecryptionService>();
 
 //builder.Services.AddScoped<UnitOfWork>();
 

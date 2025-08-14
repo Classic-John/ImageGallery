@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\Images\\default.jpg",
+      "PackagePath": "staticwebassets\\Images\\default.jpg"
+    },
+    {
       "Id": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
       "PackagePath": "staticwebassets\\JavaScript.js"
     },

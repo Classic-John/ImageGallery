@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Core/1.0.0": {
         "dependencies": {
+          "BCrypt-Official": "0.1.109",
           "Datalayer": "1.0.0",
           "SixLabors.ImageSharp": "3.1.11"
         },
@@ -47,6 +48,14 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "BCrypt-Official/0.1.109": {
+        "runtime": {
+          "lib/BCrypt.Net.dll": {
+            "assemblyVersion": "0.1.5073.29922",
+            "fileVersion": "0.1.0.0"
           }
         }
       },
@@ -656,6 +665,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "BCrypt-Official/0.1.109": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4iTKqcCn1Eb3fsbbjhv9d9bwswCvEwXavwwo+XTrYAGCfP1YfVZGmRybKWLf2A6BDh+9bZn4zK6AnQaNcqtraA==",
+      "path": "bcrypt-official/0.1.109",
+      "hashPath": "bcrypt-official.0.1.109.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

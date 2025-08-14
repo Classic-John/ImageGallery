@@ -9,22 +9,23 @@
 		<form id="imagesForm" asp-controller="Home" asp-action="DuplicateImage" method="post">
 			<div class="col">
 				<div class="card h-100">
-					<img src=@("data:image/jpg;base64,"+Convert.ToBase64String(image.Image)) class="card-img-top h-100" />
+					<img src=@(image.IsUnlocked is false ? "wwwroot/Images/default.jpg" : "data:image/jpg;base64,"+Convert.ToBase64String(image.Image)) class="card-img-top h-100" />
 					<div class="card-body">
 						<input type="text" class="form-control" value="@image.Id" name="imageId" hidden />
 						<h5 class="card-title">@image.Name</h5>
-						<p class="card-text @(image.Subject is null ? "hidden" :"")>@image.Subject.Name</p>
-				</div>
-				<div class="card-footer">
-						<blockquote class="blockquote">
-							<div class="card-text">Created at: @image.CreationDate.ToString("dd/MM/yyyy HH:mm")</div>
-						</blockquote>
-						<button class="btn btn-primary" type="submit">Duplicate</button>
-						<button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#updateImage" onclick="changeWithId('@image.Id','imageIdUpdateImage')">Update</button>
-						<button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#deleteImage" onclick="changeWithId('@image.Id','imageIdDeleteImage')">Delete</button>
-						<button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#changeSubject" onclick="changeWithId('@image.Id','imageIdFromChangeSubject')">Change Subject</button>
-						<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#FilterModal" onclick="changeWithId('@image.Id','imageIdFromFilter')">Image Filter</button>
+						<p class="card-text @(image.Subject is null ? "d-none" :"")">@image.Subject.Name</p>
 					</div>
+							<div class="card-footer">
+								<blockquote class="blockquote">
+									<div class="card-text">Created at: @image.CreationDate.ToString("dd/MM/yyyy HH:mm")</div>
+								</blockquote>
+								<button class="btn btn-primary @(!image.IsUnlocked ? "d-none" : "")" type="submit">Duplicate</button>
+								<button class="btn btn-warning @(!image.IsUnlocked ? "d-none" : "")" type="button" data-bs-toggle="modal" data-bs-target="#updateImage" onclick="changeWithId('@image.Id','imageIdUpdateImage')">Update</button>
+								<button class="btn btn-danger @(!image.IsUnlocked ? "d-none" : "")" type="button" data-bs-toggle="modal" data-bs-target="#deleteImage" onclick="changeWithId('@image.Id','imageIdDeleteImage')">Delete</button>
+								<button class="btn btn-secondary @(!image.IsUnlocked ? "d-none" : "")" type="button" data-bs-toggle="modal" data-bs-target="#changeSubject" onclick="changeWithId('@image.Id','imageIdFromChangeSubject')">Change Subject</button>
+								<button class="btn btn-primary @(!image.IsUnlocked ? "d-none" : "")" type="button" data-bs-toggle="modal" data-bs-target="#FilterModal" onclick="changeWithId('@image.Id','imageIdFromFilter')">Image Filter</button>
+						<button class="btn btn-primary @(image.IsUnlocked ? "d-none" : "")" type="button" data-bs-toggle="modal" data-bs-target="#unlockImageModal" onclick="changeWithId('@image.Id','imageIdFromUnlocking')">Unlock image</button>
+							</div>
 				</div>
 			</div>
 		</form>
@@ -56,7 +57,7 @@
 						</div>
 
 						<input type="file" id="image" name="image" accept="image/*" placeholder="Upload Photo" />
-						<img src="Images/default.jpg" id="currentImage" width="50" height="50" />
+						<img src="wwwroot/Images/default.jpg" id="currentImage" width="50" height="50" />
 					</div>
 					<button class="btn btn-primary" type="submit">Add Image</button>
 				</form>
@@ -193,6 +194,24 @@
 						</select>
 					</div>
 					<button class="btn btn-primary" type="submit">Apply filter</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="unlockImageModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header justify-content-center">
+				Unlock Image
+			</div>
+			<div class="modal-body">
+				<form asp-controller="Home" asp-action="UnlockImage" method="post">
+					<input type="text" class="form-control" name="imageIdFromUnlocking" id="imageIdFromUnlocking" hidden/>
+					<input type="text" class="form-control" name="passwordFromUnlocking" />
+					<label for="passwordFromUnlocking" class="form-label">Insert Password</label>
+					<button class="btn btn-primary" type="submit">Submit</button>
 				</form>
 			</div>
 		</div>

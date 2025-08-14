@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DtbCzGHRD6C1v0bo5ZidHzrvEy3KBoWdd5IWNrA6HHs=",
+  "Hash": "Nlfes/Iuc0U1p1S3wyeWYEQadTq17efnz6FqVev9gyk=",
   "Source": "Image gallery",
   "BasePath": "_content/Image gallery",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\Images\\default.jpg",
+      "SourceId": "Image gallery",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\",
+      "BasePath": "_content/Image gallery",
+      "RelativePath": "Images/default#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m7n3e2l0s8",
+      "Integrity": "Qv6GepdQvtx9KKD8Q0aJ2mhA6gQ04N4ysW/L+MqhnJU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\default.jpg"
+    },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
       "SourceId": "Image gallery",
@@ -39,6 +60,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "Images/default.jpg",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\Images\\default.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15905"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qv6GepdQvtx9KKD8Q0aJ2mhA6gQ04N4ysW/L+MqhnJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Aug 2025 19:14:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qv6GepdQvtx9KKD8Q0aJ2mhA6gQ04N4ysW/L+MqhnJU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/default.m7n3e2l0s8.jpg",
+      "AssetFile": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\Images\\default.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15905"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qv6GepdQvtx9KKD8Q0aJ2mhA6gQ04N4ysW/L+MqhnJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Aug 2025 19:14:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m7n3e2l0s8"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/default.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qv6GepdQvtx9KKD8Q0aJ2mhA6gQ04N4ysW/L+MqhnJU="
+        }
+      ]
+    },
     {
       "Route": "JavaScript.80v9cbenp1.js",
       "AssetFile": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",

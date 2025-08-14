@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,11 @@ namespace Datalayer.Models
         public User? User { get; set; }
         public DateTime CreationDate { get; set; }
         public Subject? Subject { get; set; }
-        public TheImage(string? name, string? password, byte[]? image, User? user, DateTime creationDate, Subject? subject)
+        [NotMapped]
+        public bool IsUnlocked { get; set; } = false;
+        public byte[] imageKey { get; set; }
+        public byte[] imageIV { get; set; }
+        public TheImage(string? name, string? password, byte[]? image, User? user, DateTime creationDate, Subject? subject, byte[] imageKey, byte[] imageIV)
         {
             Name = name;
             Password = password;
@@ -23,6 +28,8 @@ namespace Datalayer.Models
             User = user;
             CreationDate = creationDate;
             Subject = subject;
+            this.imageKey = imageKey;
+            this.imageIV = imageIV;
         }
         public TheImage(string? name, string? password, byte[]? image, User? user, DateTime creationDate)
         {
