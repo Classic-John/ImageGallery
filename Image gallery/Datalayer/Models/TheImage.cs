@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Datalayer.DTO;
 using Datalayer.Models.BaseClass;
 
 namespace Datalayer.Models
@@ -18,9 +19,10 @@ namespace Datalayer.Models
         public Subject? Subject { get; set; }
         [NotMapped]
         public bool IsUnlocked { get; set; } = false;
-        public byte[] imageKey { get; set; }
-        public byte[] imageIV { get; set; }
-        public TheImage(string? name, string? password, byte[]? image, User? user, DateTime creationDate, Subject? subject, byte[] imageKey, byte[] imageIV)
+        public byte[] ImageKey { get; set; }
+        public byte[] ImageIV { get; set; }
+        public byte[] PasswordSalt { get; set; }
+        public TheImage(string? name, string? password, byte[]? image, User? user, DateTime creationDate, Subject? subject, byte[] imageKey, byte[] imageIV, byte[] salt)
         {
             Name = name;
             Password = password;
@@ -28,8 +30,22 @@ namespace Datalayer.Models
             User = user;
             CreationDate = creationDate;
             Subject = subject;
-            this.imageKey = imageKey;
-            this.imageIV = imageIV;
+            ImageKey = imageKey;
+            ImageIV = imageIV;
+            PasswordSalt = salt;
+        }
+        public TheImage(int id,string? name, string? password, byte[]? image, User? user, DateTime creationDate, Subject? subject, byte[] imageKey, byte[] imageIV, byte[] salt)
+        {
+            Id=id;
+            Name = name;
+            Password = password;
+            Image = image;
+            User = user;
+            CreationDate = creationDate;
+            Subject = subject;
+            ImageKey = imageKey;
+            ImageIV = imageIV;
+            PasswordSalt = salt;
         }
         public TheImage(string? name, string? password, byte[]? image, User? user, DateTime creationDate)
         {
@@ -40,4 +56,10 @@ namespace Datalayer.Models
             CreationDate = creationDate;
         }
     }
+    public static class TheImageExtensions
+    {
+        public static TheImageDTO toBase(this TheImage image)
+            => new TheImageDTO(image.Id, image.Name, image.Password, image.Image, image.User, image.CreationDate, image.Subject, image.ImageKey, image.ImageIV, image.PasswordSalt);
+    }
 }
+

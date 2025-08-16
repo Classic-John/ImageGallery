@@ -54,7 +54,6 @@ builder.Services.AddScoped<IEncryptionAndDecryptionService,EncryptionAndDecrypti
 
 //builder.Services.AddScoped<UnitOfWork>();
 
-//builder.Services.AddScoped<IUserService,UserService>();
 
 /*builder.Services.AddDbContext<ImageGalleryContext>(
        options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"), b => b.MigrationsAssembly("Image Gallery")));*/

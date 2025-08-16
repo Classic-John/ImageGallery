@@ -93,3 +93,6 @@ C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Imag
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\Image gallery.staticwebassets.runtime.json
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\BCrypt.Net.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\AutoMapper.Collection.dll
+C:\Users\Administrator\Desktop\Facultate\Altele\Concursuri stat\SIE\Proiect\Image gallery\Image gallery\bin\Debug\net8.0\AutoMapper.Extensions.ExpressionMapping.dll

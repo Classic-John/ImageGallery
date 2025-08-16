@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Datalayer.Interfaces;
 using System.Security.Cryptography;
 using BCrypt.Net;
+using Datalayer.Models;
 
 namespace Core.Services
 {
@@ -58,17 +59,18 @@ namespace Core.Services
             }
             return encryptedImage;
         }
-        public (byte[], byte[]) GenerateKeyAndInitializationVector()
+        public SecurityItems DeriveKeyAndInitializationVectorFromPassword(string? password, byte[]? salt = null)
         {
-            byte[] iv = new byte[16];
-            byte[] key = new byte[16];
+            salt = salt ?? RandomNumberGenerator.GetBytes(16);
+            byte[] iv;
+            byte[] key;
 
-            using (RandomNumberGenerator generator = RandomNumberGenerator.Create())
+            using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 100000, HashAlgorithmName.SHA3_256))
             {
-                generator.GetBytes(key);
-                generator.GetBytes(iv);
+                key = pbkdf2.GetBytes(16);
+                iv = pbkdf2.GetBytes(16);
             }
-            return (key, iv);
+            return new SecurityItems(key, iv, salt);
         }
 
         public string HashPassword(string? insertedPassword)

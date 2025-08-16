@@ -3,8 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\dto\\subjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\dto\\subjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\dto\\theimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\dto\\theimagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\theimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\theimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14D4CC23-9FE9-4BB4-A1EB-2D280A631952}|Core\\Core.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14D4CC23-9FE9-4BB4-A1EB-2D280A631952}|Core\\Core.csproj|solutionrelative:core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\imagegallerycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\imagegallerycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\baseclass\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\baseclass\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14D4CC23-9FE9-4BB4-A1EB-2D280A631952}|Core\\Core.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\core\\services\\encryptionanddecryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,12 +71,16 @@
       "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\views\\home\\usergallery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\theimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\theimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\interfaces\\iencryptionanddecryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\interfaces\\iencryptionanddecryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\securityitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\securityitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14D4CC23-9FE9-4BB4-A1EB-2D280A631952}|Core\\Core.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\core\\services\\imagefiterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,18 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\interfaces\\iimagefilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\interfaces\\iimagefilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14D4CC23-9FE9-4BB4-A1EB-2D280A631952}|Core\\Core.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14D4CC23-9FE9-4BB4-A1EB-2D280A631952}|Core\\Core.csproj|solutionrelative:core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14D4CC23-9FE9-4BB4-A1EB-2D280A631952}|Core\\Core.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\core\\services\\theimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +107,6 @@
       "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\repositories\\theimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\wwwroot\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\wwwroot\\javascript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -71,36 +115,8 @@
       "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|solutionrelative:image gallery\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\models\\baseclass\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\models\\baseclass\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\datalayer\\imagegallerycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E5B108F-F2E7-4427-95BF-77562622F3B1}|Datalayer\\Datalayer.csproj|solutionrelative:datalayer\\imagegallerycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BF51331-F50F-4298-84E0-C887E675115A}|Image gallery\\Image gallery.csproj|c:\\users\\administrator\\desktop\\facultate\\altele\\concursuri stat\\sie\\proiect\\image gallery\\image gallery\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -122,310 +138,166 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EncryptionAndDecryptionService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\EncryptionAndDecryptionService.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\EncryptionAndDecryptionService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\EncryptionAndDecryptionService.cs",
-              "RelativeToolTip": "Core\\Services\\EncryptionAndDecryptionService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAhwCEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T19:34:59.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Image gallery\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Image gallery\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAWwKIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T15:00:29.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TheImageService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\TheImageService.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\TheImageService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\TheImageService.cs",
-              "RelativeToolTip": "Core\\Services\\TheImageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T21:14:41.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\UserService.cs",
-              "RelativeToolTip": "Core\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T21:14:07.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Program.cs",
-              "RelativeDocumentMoniker": "Image gallery\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Program.cs",
-              "RelativeToolTip": "Image gallery\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAADQAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T14:38:07.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IImageFilterService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IImageFilterService.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\IImageFilterService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IImageFilterService.cs",
-              "RelativeToolTip": "Datalayer\\Interfaces\\IImageFilterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T18:40:49.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TheImage.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\TheImage.cs",
               "RelativeDocumentMoniker": "Datalayer\\Models\\TheImage.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\TheImage.cs",
               "RelativeToolTip": "Datalayer\\Models\\TheImage.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAcwD4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-08T19:37:52.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserGallery.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\UserGallery.cshtml",
-              "RelativeDocumentMoniker": "Image gallery\\Views\\Home\\UserGallery.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\UserGallery.cshtml",
-              "RelativeToolTip": "Image gallery\\Views\\Home\\UserGallery.cshtml",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAANoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-07T18:05:39.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEncryptionAndDecryptionService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
-              "RelativeToolTip": "Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T19:32:31.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ImageFiterService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\ImageFiterService.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\ImageFiterService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\ImageFiterService.cs",
-              "RelativeToolTip": "Core\\Services\\ImageFiterService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T17:58:25.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ITheImageService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\ITheImageService.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\ITheImageService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\ITheImageService.cs",
-              "RelativeToolTip": "Datalayer\\Interfaces\\ITheImageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T21:17:41.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Datalayer\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T19:51:12.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FilterOption.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Enums\\FilterOption.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Enums\\FilterOption.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Enums\\FilterOption.cs",
-              "RelativeToolTip": "Datalayer\\Enums\\FilterOption.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-13T18:33:14.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TheImageRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\TheImageRepository.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Repositories\\TheImageRepository.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\TheImageRepository.cs",
-              "RelativeToolTip": "Datalayer\\Repositories\\TheImageRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T19:51:35.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "Datalayer\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T21:22:12.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "JavaScript.js",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
-              "RelativeDocumentMoniker": "Image gallery\\wwwroot\\JavaScript.js",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
-              "RelativeToolTip": "Image gallery\\wwwroot\\JavaScript.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-11T20:09:23.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Image gallery\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Image gallery\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-06T15:03:10.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "BaseRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\BaseRepo.cs",
-              "RelativeDocumentMoniker": "Datalayer\\BaseRepo.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\BaseRepo.cs",
-              "RelativeToolTip": "Datalayer\\BaseRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBZwBcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T19:52:39.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\BaseClass\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Models\\BaseClass\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\BaseClass\\BaseEntity.cs",
-              "RelativeToolTip": "Datalayer\\Models\\BaseClass\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T19:38:55.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "Datalayer\\Models\\Subject.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\Subject.cs",
-              "RelativeToolTip": "Datalayer\\Models\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T20:05:24.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\User.cs",
               "RelativeDocumentMoniker": "Datalayer\\Models\\User.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\User.cs",
               "RelativeToolTip": "Datalayer\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-08T19:37:13.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Image gallery\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Image gallery\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-07T18:23:57.623Z",
+              "DocumentIndex": 8,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\UserService.cs",
+              "RelativeToolTip": "Core\\Services\\UserService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwB4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T21:14:07.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "Image gallery\\Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "Image gallery\\Views\\Home\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-06T15:02:44.78Z",
+              "DocumentIndex": 4,
+              "Title": "TheImageDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\DTO\\TheImageDTO.cs",
+              "RelativeDocumentMoniker": "Datalayer\\DTO\\TheImageDTO.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\DTO\\TheImageDTO.cs",
+              "RelativeToolTip": "Datalayer\\DTO\\TheImageDTO.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T16:18:52.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 3,
+              "Title": "SubjectDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\DTO\\SubjectDTO.cs",
+              "RelativeDocumentMoniker": "Datalayer\\DTO\\SubjectDTO.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\DTO\\SubjectDTO.cs",
+              "RelativeToolTip": "Datalayer\\DTO\\SubjectDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T16:17:06.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Datalayer\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T21:22:12.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\DTO\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Datalayer\\DTO\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\DTO\\UserDTO.cs",
+              "RelativeToolTip": "Datalayer\\DTO\\UserDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T16:20:14.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Image gallery\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Image gallery\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T15:00:29.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Models\\Subject.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\Subject.cs",
+              "RelativeToolTip": "Datalayer\\Models\\Subject.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T20:05:24.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Program.cs",
+              "RelativeDocumentMoniker": "Image gallery\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Program.cs",
+              "RelativeToolTip": "Image gallery\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADoAAACVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T14:38:07.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ImageGalleryContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\ImageGalleryContext.cs",
+              "RelativeDocumentMoniker": "Datalayer\\ImageGalleryContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\ImageGalleryContext.cs",
+              "RelativeToolTip": "Datalayer\\ImageGalleryContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T14:56:55.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BaseRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\BaseRepo.cs",
+              "RelativeDocumentMoniker": "Datalayer\\BaseRepo.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\BaseRepo.cs",
+              "RelativeToolTip": "Datalayer\\BaseRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T19:52:39.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Datalayer\\UnitOfWork.cs",
@@ -433,25 +305,203 @@
               "RelativeToolTip": "Datalayer\\UnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T20:21:49.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-08T20:21:49.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EncryptionAndDecryptionService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\EncryptionAndDecryptionService.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\EncryptionAndDecryptionService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\EncryptionAndDecryptionService.cs",
+              "RelativeToolTip": "Core\\Services\\EncryptionAndDecryptionService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA1wCAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T19:34:59.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserGallery.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\UserGallery.cshtml",
+              "RelativeDocumentMoniker": "Image gallery\\Views\\Home\\UserGallery.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\UserGallery.cshtml",
+              "RelativeToolTip": "Image gallery\\Views\\Home\\UserGallery.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAFgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T18:05:39.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\BaseClass\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Models\\BaseClass\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\BaseClass\\BaseEntity.cs",
+              "RelativeToolTip": "Datalayer\\Models\\BaseClass\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T19:38:55.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Image gallery\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Image gallery\\Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-06T15:02:44.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IEncryptionAndDecryptionService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
+              "RelativeToolTip": "Datalayer\\Interfaces\\IEncryptionAndDecryptionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T19:32:31.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Datalayer\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T19:51:12.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IImageFilterService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IImageFilterService.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\IImageFilterService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\IImageFilterService.cs",
+              "RelativeToolTip": "Datalayer\\Interfaces\\IImageFilterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T18:40:49.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SecurityItems.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\SecurityItems.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Models\\SecurityItems.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Models\\SecurityItems.cs",
+              "RelativeToolTip": "Datalayer\\Models\\SecurityItems.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T12:39:42.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TheImageService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\TheImageService.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\TheImageService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\TheImageService.cs",
+              "RelativeToolTip": "Core\\Services\\TheImageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T21:14:41.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ImageFiterService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\ImageFiterService.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\ImageFiterService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Services\\ImageFiterService.cs",
+              "RelativeToolTip": "Core\\Services\\ImageFiterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T17:58:25.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ITheImageService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\ITheImageService.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Interfaces\\ITheImageService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Interfaces\\ITheImageService.cs",
+              "RelativeToolTip": "Datalayer\\Interfaces\\ITheImageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T21:17:41.374Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "ImageGalleryContext.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\ImageGalleryContext.cs",
-              "RelativeDocumentMoniker": "Datalayer\\ImageGalleryContext.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\ImageGalleryContext.cs",
-              "RelativeToolTip": "Datalayer\\ImageGalleryContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Title": "FilterOption.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Enums\\FilterOption.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Enums\\FilterOption.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Enums\\FilterOption.cs",
+              "RelativeToolTip": "Datalayer\\Enums\\FilterOption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T14:56:55.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-13T18:33:14.332Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
+              "Title": "TheImageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\TheImageRepository.cs",
+              "RelativeDocumentMoniker": "Datalayer\\Repositories\\TheImageRepository.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Repositories\\TheImageRepository.cs",
+              "RelativeToolTip": "Datalayer\\Repositories\\TheImageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T19:51:35.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "JavaScript.js",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
+              "RelativeDocumentMoniker": "Image gallery\\wwwroot\\JavaScript.js",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\wwwroot\\JavaScript.js",
+              "RelativeToolTip": "Image gallery\\wwwroot\\JavaScript.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-11T20:09:23.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Image gallery\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Image gallery\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-06T15:03:10.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Image gallery\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Image gallery\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T18:23:57.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Image gallery\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Image gallery\\Views\\_ViewStart.cshtml",
@@ -459,12 +509,11 @@
               "RelativeToolTip": "Image gallery\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-07T18:01:35.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-07T18:01:35.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "Datalayer.csproj",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Datalayer\\Datalayer.csproj",
               "RelativeDocumentMoniker": "Datalayer\\Datalayer.csproj",
@@ -472,12 +521,11 @@
               "RelativeToolTip": "Datalayer\\Datalayer.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T14:53:53.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T14:53:53.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "Core.csproj",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Facultate\\Altele\\Concursuri stat\\SIE\\Proiect\\Image gallery\\Core\\Core.csproj",
               "RelativeDocumentMoniker": "Core\\Core.csproj",
@@ -485,8 +533,7 @@
               "RelativeToolTip": "Core\\Core.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T14:48:15.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-06T14:48:15.086Z"
             }
           ]
         }
