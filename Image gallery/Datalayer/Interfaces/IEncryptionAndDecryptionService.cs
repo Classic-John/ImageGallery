@@ -15,5 +15,8 @@ namespace Datalayer.Interfaces
         public byte[] DecryptImage(byte[]? image, byte[] key, byte[] iv);
         public string HashPassword(string? insertedPassword);
         public bool VerifyHashedPassword(string? insertedPassword, string? encryptedPassword);
+        public Task<byte[]> EncryptImageAsync(byte[] image, byte[] key, byte[] iv);
+        public Task<byte[]> DecryptImageAsync(byte[] image, byte[] key, byte[] iv);
+        public Task<SecurityItems> DeriveKeyAndIVAsync(string? password, byte[]? salt = null);
     }
 }

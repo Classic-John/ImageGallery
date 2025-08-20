@@ -22,6 +22,11 @@ namespace Datalayer.Models
         public byte[] ImageKey { get; set; }
         public byte[] ImageIV { get; set; }
         public byte[] PasswordSalt { get; set; }
+        public TheImage() { }
+        public TheImage(int id)
+        {
+            Id = id;
+        }
         public TheImage(string? name, string? password, byte[]? image, User? user, DateTime creationDate, Subject? subject, byte[] imageKey, byte[] imageIV, byte[] salt)
         {
             Name = name;
@@ -58,7 +63,7 @@ namespace Datalayer.Models
     }
     public static class TheImageExtensions
     {
-        public static TheImageDTO toBase(this TheImage image)
+        public static TheImageDTO toDTO(this TheImage image)
             => new TheImageDTO(image.Id, image.Name, image.Password, image.Image, image.User, image.CreationDate, image.Subject, image.ImageKey, image.ImageIV, image.PasswordSalt);
     }
 }

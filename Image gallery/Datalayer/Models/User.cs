@@ -16,6 +16,8 @@ namespace Datalayer.Models
         public string? Password { get; set; }
         public List<TheImage> Images { get; set; }
 
+        public User(int? userId)
+            => Id = userId ?? default;
         public User(string? name, string? password, List<TheImage> images)
         {
             Name = name;
@@ -34,7 +36,7 @@ namespace Datalayer.Models
     {
         public static UserDTO toDto(this User user)
         {
-            return new UserDTO(user.Id,user.Name,user.Password,user.Images);
+            return new UserDTO(user.Id, user.Name, user.Password, user.Images);
         }
     }
 }

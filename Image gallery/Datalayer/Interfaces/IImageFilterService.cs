@@ -9,5 +9,6 @@ namespace Datalayer.Interfaces
     public interface IImageFilterService
     {
         public byte[] ApplyChosenFilter(byte[]? image, int? filter);
+        public Task<byte[]> WaitForFilter(byte[]? image, int? filter);
     }
 }

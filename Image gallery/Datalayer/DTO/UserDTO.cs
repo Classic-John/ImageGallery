@@ -10,10 +10,10 @@ namespace Datalayer.DTO
     public class UserDTO
     {
         public int Id { get; set; } = default;
-        public string? Name { get; set; }
-        public string? Password { get; set; }
-        public List<TheImage> Images { get; set; }
-
+        public string? Name { get; set; } = default;
+        public string? Password { get; set; } = default;
+        public List<TheImage> Images { get; set; } = new();
+        public UserDTO() { }
         public UserDTO(int id ,string? name, string? password, List<TheImage> images)
         {
             Id = id;

@@ -10,7 +10,8 @@ namespace Datalayer.Interfaces
 {
     public interface IUserService
     {
-        public Task<List<UserDTO>> GetUsers();
+        public List<User> Users { get; set; }
+        public Task<List<User>> GetUsers();
         public Task<bool> AddUser(User? user);
         public Task<bool> DeleteUser(User? user);
         public Task<bool> UpdateUser(User? user);

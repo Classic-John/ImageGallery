@@ -12,6 +12,7 @@ namespace Datalayer.DTO
     {
         public int Id { get; set; } = default;
         public string? Name { get; set; }
+        public SubjectDTO() { }
         public SubjectDTO(string? name)
             => Name = name;
         public SubjectDTO(int id, string? name)

@@ -8,7 +8,7 @@
 	{
 		<div class="col">
 			<div class="card h-100">
-				<img src=@(image.IsUnlocked is false ? "wwwroot/Images/default.jpg" : "data:image/jpg;base64,"+Convert.ToBase64String(image.Image)) class="card-img-top h-100" />
+				<img src=@(image.IsUnlocked is false ? "~/Images/default.jpg" : "data:image/jpg;base64,"+Convert.ToBase64String(image.Image)) class="card-img-top h-100" />
 				<div class="card-body">
 					<input type="text" class="form-control" value="@image.Id" name="imageId" hidden />
 					<h5 class="card-title">@image.Name</h5>
@@ -52,7 +52,6 @@
 		</div>
 	</div>
 </div>
-</div>
 <div class="modal fade" id="addImageModal">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -64,7 +63,7 @@
 					<div class="vstack gap-3">
 						<input type="text" class="form-floating" name="imageName" id="imageName" placeholder="Image Name" />
 						<label for="imageName" class="form-label" name="imageName">Image Name</label>
-						<input type="text" class="form-floating" name="imagePassword" id="password" placeholder="Protect Image" />
+						<input type="text" class="form-floating" name="ImagePassword" id="password" placeholder="Protect Image" />
 						<label for="imagePassword" class="form-label" name="imagePassword">Image Password</label>
 						<div class="input-group mb-3">
 							<span class="input-group-text" id="subjects">Subjects</span>
@@ -136,7 +135,7 @@
 	</div>
 	<div class="modal-body">
 		<form asp-controller="Home" asp-action="ChangeSubject" method="post">
-			<input type="text" class="form-control" name="imageId" id="imageIdFromChangeSubject" hidden />
+			<input type="text" class="form-control" name="imageIdFromChangeSubject" id="imageIdFromChangeSubject" hidden />
 			<div class="input-group mb-3">
 				<span class="input-group-text" id="subjects">Subjects</span>
 				<select type="text" class="form-select" name="chosenSubject" id="chosenSubject">

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Core.Services;
+using Datalayer.DTO;
 using Datalayer.Enums;
 using Datalayer.Interfaces;
 using Datalayer.Models;
@@ -18,34 +19,67 @@ namespace Image_gallery.Controllers
         private readonly ITheImageService _theImageService;
         private readonly IUserService _userService;
         private readonly IEncryptionAndDecryptionService _encryptionAndDecryptionService;
-        public HomeController(IImageFilterService imageFilterService, ITheImageService theImageService, IUserService userService, IEncryptionAndDecryptionService encryptionAndDecryptionService)
+        private readonly ISubjectService _subjectService;
+        public HomeController(IImageFilterService imageFilterService, ITheImageService theImageService, IUserService userService, IEncryptionAndDecryptionService encryptionAndDecryptionService, ISubjectService subjectService)
         {
             _imageFilterService = imageFilterService;
             _theImageService = theImageService;
             _userService = userService;
             _encryptionAndDecryptionService = encryptionAndDecryptionService;
+            _subjectService = subjectService;
+        }
+        [HttpPost("LoginCheck")]
+        public async Task<IActionResult> LoginCheck([FromForm] UserDTO userDTO)
+        {
+            User user = null;
+            List<Subject> subjects = await _subjectService.GetSubjects();
+            List<User> users = await _userService.GetUsers();
+            List<TheImage> images = await _theImageService.GetImages();
+
+            foreach (Subject sub in subjects)
+            {
+                foreach (TheImage image in images)
+                {
+                    if (image.Subject.Id == sub.Id)
+                        image.Subject = new(image.Subject.Id, sub.Name);
+                }
+            }
+            foreach (User thisUser in users)
+            {
+                thisUser.Images = images.FindAll(image => image.User.Id == thisUser.Id);
+                images.ForEach(image => image.User = thisUser);
+            }
+            _userService.Users = users;
+            _subjectService.Subjects = subjects;
+            _theImageService.Images = images;
+            try
+            {
+                user = _userService.Users.Find(user => user.Name.Equals(userDTO.Name));
+                if (user is null)
+                    return View("Login");
+                if (!_encryptionAndDecryptionService.VerifyHashedPassword(userDTO.Password, user.Password))
+                    return View("Login");
+            }
+            catch (Exception) { return View("Login"); }
+            CurrentUser = user;
+            IsLoggedIn = true;
+
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [Route("/")]
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
             return View("Login");
         }
         [HttpPost("UserGallery")]
-        public IActionResult UserGallery()
+        public async Task<IActionResult> UserGallery()
         {
-            if (IsLoggedIn)
-                return View("UserGallery", (CurrentUser.Images, Subjects));
-            string? name= Request.Form["Username"];
-            string? password= Request.Form["Password"];
-            CurrentUser = new(name, password, new List<TheImage>());
-            _userService.AddUser(CurrentUser);
-            IsLoggedIn = true;
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         public IActionResult LogOff()
         {
             CurrentUser = null;
-            return Login();
+            return View("Login");
         }
         public static async Task<byte[]?> ConvertImageToBytes(IFormFile file)
         {
@@ -60,42 +94,47 @@ namespace Image_gallery.Controllers
             return null;
         }
         [HttpPost("AddImage")]
-        public IActionResult AddImage()
+        public async Task<IActionResult> AddImage()
         {
             string? name = Request.Form["imageName"];
             DateTime creationTime = DateTime.Now;
             byte[]? image = ConvertImageToBytes(Request.Form.Files["image"]).Result;
             string? password = Request.Form["ImagePassword"];
             string? subject = Request.Form["chosenSubject"];
-            SecurityItems items = _encryptionAndDecryptionService.DeriveKeyAndInitializationVectorFromPassword(password);
-            byte[] encryptedImage = _encryptionAndDecryptionService.EncryptImage(image, items.Key, items.IV);
+            SecurityItems items = await _encryptionAndDecryptionService.DeriveKeyAndIVAsync(password);
+            byte[] encryptedImage = await _encryptionAndDecryptionService.EncryptImageAsync(image, items.Key, items.IV);
             string? hashedPassword = _encryptionAndDecryptionService.HashPassword(password);
-            TheImage? newImage = new(name, hashedPassword, encryptedImage, CurrentUser, creationTime, new Subject(subject), items.Key, items.IV,items.Salt);
+            List<Subject> found = _subjectService.Subjects.FindAll(item => item.Name.Equals(subject));
+            if (found.Count < 1)
+                return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
+            TheImage? newImage = new(name, hashedPassword, encryptedImage, CurrentUser, creationTime, found[0], items.Key, items.IV, items.Salt);
+            await _theImageService.AddImage(newImage);
             CurrentUser.Images.Add(newImage);
+            await _userService.UpdateUser(CurrentUser);
+            _theImageService.Images = await _theImageService.GetImages();
 
-            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
 
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("UpdateImage")]
-        public IActionResult UpdateImage()
+        public async Task<IActionResult> UpdateImage()
         {
             int? id = Convert.ToInt32(Request.Form["imageId"]);
             string? name = Request.Form["imageName"];
             DateTime creationTime = DateTime.Now;
             string? password = Request.Form["ImagePassword"];
-            SecurityItems items = _encryptionAndDecryptionService.DeriveKeyAndInitializationVectorFromPassword(password);
-            byte[]? image = _encryptionAndDecryptionService.EncryptImage(ConvertImageToBytes(Request.Form.Files["image"]).Result, items.Key, items.IV);
-            string? subject = Request.Form["subjectFromUpdate"];
+            SecurityItems items = await _encryptionAndDecryptionService.DeriveKeyAndIVAsync(password);
+            byte[]? image = await _encryptionAndDecryptionService.EncryptImageAsync(ConvertImageToBytes(Request.Form.Files["image"]).Result, items.Key, items.IV);
             string hashedPassword = _encryptionAndDecryptionService.HashPassword(password);
-            CurrentUser.Images[id.Value] = new TheImage(name, password, image, CurrentUser, creationTime, new Subject(subject), items.Key, items.IV,items.Salt);
-
-            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
-
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            TheImage selectedImage = CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value);
+            selectedImage = new TheImage(selectedImage.Id, name, password, image, CurrentUser, creationTime, selectedImage.Subject, items.Key, items.IV, items.Salt);
+            await _theImageService.UpdateImage(selectedImage);
+            await _userService.UpdateUser(CurrentUser);
+            _theImageService.Images = await _theImageService.GetImages();
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("DeleteImage")]
-        public IActionResult DeleteImage()
+        public async Task<IActionResult> DeleteImage()
         {
             string? password = "";
             try
@@ -107,70 +146,126 @@ namespace Image_gallery.Controllers
                 Console.WriteLine(ex.Message);
             }
             int? id = Convert.ToInt32(Request.Form["imageIdDeleteImage"]);
-            if (_encryptionAndDecryptionService.VerifyHashedPassword(password, CurrentUser.Images[id.Value].Password))
-                CurrentUser.Images.Remove(CurrentUser.Images[id.Value]);
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            if (_encryptionAndDecryptionService.VerifyHashedPassword(password, CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Password))
+                await _theImageService.DeleteImage(CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value));
+            await _userService.UpdateUser(CurrentUser);
+            _theImageService.Images = await _theImageService.GetImages();
+            CurrentUser.Images.Remove(CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value));
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("DuplicateImage")]
-        public IActionResult DuplicateImage()
+        public async Task<IActionResult> DuplicateImage()
         {
             int? id = Convert.ToInt32(Request.Form["imageIdFromDuplication"]);
             string? password = Request.Form["passwordFromDuplication"];
             string? hashedPassword = _encryptionAndDecryptionService.HashPassword(password);
-            SecurityItems items = _encryptionAndDecryptionService.DeriveKeyAndInitializationVectorFromPassword(password);
-            byte[] image = _encryptionAndDecryptionService.EncryptImage(CurrentUser.Images[id.Value].Image,items.Key,items.IV);
-            CurrentUser.Images.Add(new TheImage(CurrentUser.Images[id.Value].Name, hashedPassword,
-                image, CurrentUser, DateTime.Now, CurrentUser.Images[id.Value].Subject,
-                items.Key, items.IV, items.Salt));
+            SecurityItems items = await _encryptionAndDecryptionService.DeriveKeyAndIVAsync(password);
+            byte[] image = await _encryptionAndDecryptionService.EncryptImageAsync(CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Image,
+                items.Key, items.IV);
+            TheImage duplicate = new(CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Name, hashedPassword,
+                image, CurrentUser, DateTime.Now, CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Subject,
+                items.Key, items.IV, items.Salt);
+            CurrentUser.Images.Add(duplicate);
+            await _theImageService.AddImage(duplicate);
+            await _userService.UpdateUser(CurrentUser);
+            _theImageService.Images = await _theImageService.GetImages();
 
-            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
-
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("AddSubject")]
-        public IActionResult AddSubject()
+        public async Task<IActionResult> AddSubject()
         {
             string? subject = Request.Form["subjectName"];
             Subjects.Add(new Subject(subject));
-            Subjects[Subjects.Count - 1].Id = Subjects.Count - 1;
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            await _subjectService.AddSubject(new Subject(subject));
+            _subjectService.Subjects.Add(new Subject(subject));
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("ApplyImageFilter")]
-        public IActionResult ApplyImageFilter()
+        public async Task<IActionResult> ApplyImageFilter()
         {
             int? id = Convert.ToInt32(Request.Form["imageIdFromFilter"]);
             int? chosenFilter = Convert.ToInt32(Request.Form["chosenFilter"]);
             string? password = Request.Form["passwordFromFilterImage"];
-            byte[] newImage = _imageFilterService.ApplyChosenFilter(CurrentUser.Images[id.Value].Image, chosenFilter.Value);
-            SecurityItems items = _encryptionAndDecryptionService.DeriveKeyAndInitializationVectorFromPassword(password);
-            byte[] encryptedImage = _encryptionAndDecryptionService.EncryptImage(newImage, items.Key, items.IV);
-            CurrentUser.Images.Add(new(CurrentUser.Images[id.Value].Name, CurrentUser.Images[id.Value].Password, encryptedImage, CurrentUser,
-                DateTime.Now, CurrentUser.Images[id.Value].Subject, items.Key,items.IV,items.Salt));
-
-            CurrentUser.Images[CurrentUser.Images.Count - 1].Id = CurrentUser.Images.Count - 1;
-
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            byte[] newImage = _imageFilterService.ApplyChosenFilter(CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Image, chosenFilter.Value);
+            SecurityItems items = await _encryptionAndDecryptionService.DeriveKeyAndIVAsync(password);
+            byte[] encryptedImage = await _encryptionAndDecryptionService.EncryptImageAsync(newImage, items.Key, items.IV);
+            TheImage filteredImage = new(CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Name,
+                CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Password, encryptedImage, CurrentUser,
+                DateTime.Now, CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Subject,
+                items.Key, items.IV, items.Salt);
+            CurrentUser.Images.Add(filteredImage);
+            await _theImageService.AddImage(filteredImage);
+            await _userService.UpdateUser(CurrentUser);
+            _theImageService.Images = await _theImageService.GetImages();
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
+        }
+        [HttpPost("ChangeSubject")]
+        public async Task<IActionResult> ChangeSubject()
+        {
+            try
+            {
+                int? id = Convert.ToInt32(Request.Form["imageIdFromChangeSubject"]);
+                string? subject = Request.Form["chosenSubject"];
+                Subject sub = (await _subjectService.GetSubjects()).FirstOrDefault(sub => sub.Name.Equals(subject));
+                if (sub is null || id is null)
+                    return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
+                TheImage currentImage = (await _theImageService.GetImages()).FirstOrDefault(image => image.Id == id.Value);
+                currentImage.Subject = sub;
+                await _theImageService.UpdateImage(currentImage);
+            }
+            catch { return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList())); }
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("FilterBySubject")]
         public IActionResult FilterBySubject()
         {
             int? subjectId = Convert.ToInt32(Request.Form["SelectedFilter"]);
-            List<TheImage> filteredImages = CurrentUser.Images.Where(image => image.Subject.Name.Equals(Subjects[subjectId.Value].Name)).ToList();
-            return View("UserGallery", (filteredImages, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            List<TheImage> filteredImages = CurrentUser.Images.Where(image =>
+            image.Subject.Name.Equals(_subjectService.Subjects.FirstOrDefault(sub => sub.Id == subjectId.Value).Name)).ToList();
+            return View("UserGallery", (filteredImages, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
         [HttpPost("UnlockImage")]
-        public IActionResult UnlockImage()
+        public async Task<IActionResult> UnlockImage()
         {
             int? id = Convert.ToInt32(Request.Form["imageIdFromUnlocking"]);
             string? password = Request.Form["passwordFromUnlocking"];
-            if (!_encryptionAndDecryptionService.VerifyHashedPassword(password, CurrentUser.Images[id.Value].Password))
-                return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            if (!_encryptionAndDecryptionService.VerifyHashedPassword(password, CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Password))
+                return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
 
-            byte[] decryptedImage = _encryptionAndDecryptionService.DecryptImage(CurrentUser.Images[id.Value].Image, CurrentUser.Images[id.Value].ImageKey, CurrentUser.Images[id.Value].ImageIV);
-            CurrentUser.Images[id.Value].Image = decryptedImage;
-            CurrentUser.Images[id.Value].IsUnlocked = true;
-            return View("UserGallery", (CurrentUser.Images, Subjects, Enum.GetNames<FilterOption>().ToList()));
+            byte[] decryptedImage = await _encryptionAndDecryptionService.DecryptImageAsync(CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Image,
+                CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).ImageKey,
+                CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).ImageIV);
+            CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).Image = decryptedImage;
+            CurrentUser.Images.FirstOrDefault(image => image.Id == id.Value).IsUnlocked = true;
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
 
+        }
+        [HttpPost("CreateAccount")]
+        public async Task<IActionResult> CreateAccount([FromForm] SpecialUserDTO userDTO)
+        {
+            List<User> users = await _userService.GetUsers();
+            _userService.Users = users;
+            _theImageService.Images = new();
+            _subjectService.Subjects = new();
+            try
+            {
+                if (_userService.Users.Find(user => user.Name.Equals(userDTO.Name)) is User)
+                    return View("Login");
+                userDTO.Password = _encryptionAndDecryptionService.HashPassword(userDTO.Password);
+                User user = new User(userDTO.Name, userDTO.Password, new List<TheImage>());
+                if ((await _userService.AddUser(user)) is false)
+                    return View("Login");
+                _userService.Users.Add(user);
+            }
+            catch (Exception) { return View("Login"); }
+
+            User currentUser = users.FirstOrDefault(user => user.Name.Equals(userDTO.Name));
+
+            CurrentUser = currentUser;
+            IsLoggedIn = true;
+            _userService.Users = await _userService.GetUsers();
+            return View("UserGallery", (CurrentUser.Images, _subjectService.Subjects, Enum.GetNames<FilterOption>().ToList()));
         }
     }
 }

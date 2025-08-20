@@ -22,17 +22,20 @@ namespace Core.Services
                 aes.Mode = CipherMode.CBC;
                 aes.Padding = PaddingMode.PKCS7;
                 ICryptoTransform encryptor = aes.CreateDecryptor();
-                using (MemoryStream memoryStream = new(image))
+                try
                 {
-                    using (CryptoStream cryptoStream = new(memoryStream, encryptor, CryptoStreamMode.Read))
+                    using (MemoryStream memoryStream = new(image))
                     {
-                        using (MemoryStream output = new())
+                        using (CryptoStream cryptoStream = new(memoryStream, encryptor, CryptoStreamMode.Read))
                         {
-                            cryptoStream.CopyTo(output);
-                            decryptedImage = output.ToArray();
+                            using (MemoryStream output = new())
+                            {
+                                cryptoStream.CopyTo(output);
+                                decryptedImage = output.ToArray();
+                            }
                         }
                     }
-                }
+                }catch(Exception ex) { return image; }
             }
             return decryptedImage;
         }
@@ -79,6 +82,15 @@ namespace Core.Services
 
         public bool VerifyHashedPassword(string? insertedPassword, string? encryptedPassword)
             => BCrypt.Net.BCrypt.Verify(insertedPassword, encryptedPassword);
+
+        public Task<byte[]> EncryptImageAsync(byte[] image, byte[] key, byte[] iv)
+            => Task.Run(() => EncryptImage(image, key, iv));
+
+
+        public Task<byte[]> DecryptImageAsync(byte[] image, byte[] key, byte[] iv)
+            => Task.Run(() => DecryptImage(image, key, iv));
+        public Task<SecurityItems> DeriveKeyAndIVAsync(string? password, byte[]? salt = null)
+            => Task.Run(() => DeriveKeyAndInitializationVectorFromPassword(password, salt));
 
     }
 }

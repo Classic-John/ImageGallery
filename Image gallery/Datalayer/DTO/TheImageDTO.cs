@@ -13,17 +13,17 @@ namespace Datalayer.DTO
     public class TheImageDTO
     {
         public int Id { get; set; } = default;
-        public string? Name { get; set; }
-        public string? Password { get; set; }
-        public byte[]? Image { get; set; }
-        public User? User { get; set; }
-        public DateTime CreationDate { get; set; }
-        public Subject? Subject { get; set; }
+        public string? Name { get; set; } = default;
+        public string? Password { get; set; } = default;
+        public byte[]? Image { get; set; } = default;
+        public User? User { get; set; } = default;
+        public DateTime CreationDate { get; set; } = default;
+        public Subject? Subject { get; set; } = default;
         [NotMapped]
         public bool IsUnlocked { get; set; } = false;
-        public byte[] ImageKey { get; set; }
-        public byte[] ImageIV { get; set; }
-        public byte[] PasswordSalt { get; set; }
+        public byte[]? ImageKey { get; set; } = default;
+        public byte[]? ImageIV { get; set; } = default;
+        public byte[]? PasswordSalt { get; set; } = default;
         public TheImageDTO(string? name, string? password, byte[]? image, User? user, DateTime creationDate, Subject? subject, byte[] imageKey, byte[] imageIV, byte[] salt)
         {
             Name = name;
@@ -49,6 +49,10 @@ namespace Datalayer.DTO
             ImageIV = imageIV;
             PasswordSalt = salt;
         }
+        public TheImageDTO(int id)
+        {
+            Id = id;
+        }
         public TheImageDTO(string? name, string? password, byte[]? image, User? user, DateTime creationDate)
         {
             Name = name;
@@ -57,6 +61,7 @@ namespace Datalayer.DTO
             User = user;
             CreationDate = creationDate;
         }
+        public TheImageDTO() { }
     }
 
     public static class TheImageDTOExtensions

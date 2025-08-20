@@ -47,20 +47,14 @@ builder.Services.AddRateLimiter(options =>
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<TheImageRepository>();
 
-builder.Services.AddScoped<IImageFilterService,ImageFiterService>();
-builder.Services.AddScoped<IUserService,UserService>();
-builder.Services.AddScoped<ITheImageService,TheImageService>();
-builder.Services.AddScoped<IEncryptionAndDecryptionService,EncryptionAndDecryptionService>();
-
-//builder.Services.AddScoped<UnitOfWork>();
-
-
-/*builder.Services.AddDbContext<ImageGalleryContext>(
-       options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"), b => b.MigrationsAssembly("Image Gallery")));*/
+builder.Services.AddSingleton<IImageFilterService,ImageFilterService>();
+builder.Services.AddSingleton<IUserService,UserService>();
+builder.Services.AddSingleton<ITheImageService,TheImageService>();
+builder.Services.AddSingleton<IEncryptionAndDecryptionService,EncryptionAndDecryptionService>();
+builder.Services.AddSingleton<ISubjectService,SubjectService>();
 
 var app = builder.Build();
 
-//app.MapGet("/", () => "Hello World!");
 app.UseRateLimiter();
 app.UseAntiforgery();
 app.UseHttpsRedirection();

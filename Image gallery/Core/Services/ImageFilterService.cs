@@ -10,7 +10,7 @@ using SixLabors.ImageSharp.Processing;
 
 namespace Core.Services
 {
-    public class ImageFiterService : IImageFilterService
+    public class ImageFilterService : IImageFilterService
     {
         public byte[] ApplyChosenFilter(byte[]? image, int? filter)
         {
@@ -44,7 +44,7 @@ namespace Core.Services
                     trueImage.Mutate(filterType => filterType.Rotate(-90));
                     break;
                 case 9:
-                    trueImage.Mutate(filterType => filterType.RotateFlip(RotateMode.None,FlipMode.Vertical));
+                    trueImage.Mutate(filterType => filterType.RotateFlip(RotateMode.None, FlipMode.Vertical));
                     break;
                 case 10:
                     trueImage.Mutate(filterType => filterType.RotateFlip(RotateMode.None, FlipMode.Horizontal));
@@ -54,5 +54,7 @@ namespace Core.Services
             trueImage.SaveAsJpeg(output);
             return output.ToArray();
         }
+        public Task<byte[]> WaitForFilter(byte[]? image, int? filter)
+            => Task.Run(() => ApplyChosenFilter(image, filter));
     }
 }

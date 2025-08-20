@@ -11,6 +11,8 @@ namespace Datalayer.Models
     public class Subject : BaseEntity
     {
         public string? Name { get; set; }
+        public Subject(int? subjectId)
+            => Id = subjectId ?? default;
         public Subject(string? name)
             => Name = name;
         public Subject(int id, string? name)
